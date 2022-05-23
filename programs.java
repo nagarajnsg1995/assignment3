@@ -1,16 +1,18 @@
-public class empwageuc3{
- public static void main(String[] args) {
-        int fulltime=1;
-        int parttime=0;
-        int rateperhour=20;
-        int emphrs=0;
-        int mysalary=0;
-        double empcheck = Math.floor(Math.random() * 10) % 2;
-       if (fulltime == empcheck)
-            emphrs=8;
-       else if ( parttime == empcheck)
-             emphrs=4;
-	mysalary=(rateperhour * emphrs);
-       System.out.println(mysalary);
+import java.util.*;
+public class cartesianuc1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number x1 ");
+        int x1 = sc.nextInt();
+        System.out.print("Enter second number x2 ");
+        int x2 = sc.nextInt();
+        System.out.print("Enter third number y1 ");
+        int y1 = sc.nextInt();
+
+        System.out.print("Enter third number y2 ");
+        int y2 = sc.nextInt();
+      double Line =Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)*1);
+      System.out.println(Line);
     }
 }
+
