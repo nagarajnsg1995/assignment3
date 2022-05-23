@@ -1,18 +1,15 @@
 import java.util.*;
-public class cartesianuc1 {
+public class cartesianuc2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first number x1 ");
-        int x1 = sc.nextInt();
-        System.out.print("Enter second number x2 ");
-        int x2 = sc.nextInt();
-        System.out.print("Enter third number y1 ");
-        int y1 = sc.nextInt();
-
-        System.out.print("Enter third number y2 ");
-        int y2 = sc.nextInt();
-      double Line =Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)*1);
-      System.out.println(Line);
+        System.out.print("Enter length of first line");
+        int a1 = sc.nextInt();
+        System.out.print("Enter length of  second line");
+        int b1 = sc.nextInt();
+        if (a1 == b1)
+            System.out.println("both lines are equal");
+        else
+            System.out.println("both lines are not equal");
     }
 }
 
