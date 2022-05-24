@@ -1,18 +1,20 @@
 
 
-
 public class empwageuc4
 {
     public static void main(String[] args) {
-        int Rateperhrs = 20;
-        int Fulltime = 1;
-        int Parttime = 2;
-        int empwage = 0;
+        int rateperhrs = 20;
+        int fulltime = 1;
+        int parttime = 2;
+        int maxhrs=100;
         int emphr = 0;
-        int workdays = 20;
-        int totalWage = 0;
-
-        for ( int days = 0; days<=workdays; days++ ) {
+        int totalemphrs=0;
+        int noworkingdays = 20;
+        int totalworkingdays = 0;
+     int   empwage=0;
+       while (totalemphrs <=maxhrs && totalworkingdays < noworkingdays)
+       {
+           totalworkingdays++;
             int empcheck = (int) Math.floor(Math.random() * 10) % 3;
 
             switch (empcheck) {
@@ -26,14 +28,16 @@ public class empwageuc4
 
                 default:
                     emphr = 0;
-                    break;
             }
-            empwage = (emphr * Rateperhrs);
-            totalWage = empwage;
-            System.out.println(empwage);
-        }
-            System.out.println(totalWage);
+           totalemphrs +=emphr;
 
+
+            System.out.println( totalworkingdays + "emphrs"  + emphr );
+        }
+             empwage = (emphr * rateperhrs);
+            System.out.println( "per day emp wage for" + emphr  + "is:" + empwage );
+           int hrs=totalemphrs * rateperhrs;
+        System.out.println( "total wage for"+ totalemphrs + "hrs is :" +    hrs);
 
     }
 }
